@@ -42,12 +42,13 @@ body {
 .inputField:hover {
     margin-bottom: .2rem;
     box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.2);
-    outline: none;
+    
 }
 
 .inputField:focus {
     width: 20rem;
     color: #ffffff;
+    outline: none;
 }
 
 .divDimensions {
@@ -62,7 +63,7 @@ h1 {
     text-transform: uppercase;
     font-size: 5rem;
     position: relative;
-    transition: all;
+    transition: all .2s;
 }
 
 h1:before {
@@ -79,19 +80,4 @@ h1:before {
     -webkit-background-clip: text;
     color: transparent;
     filter: blur(.4px);
-}
-
-h1:before .slideanimation {
-    animation: slideIn 1s;
-    animation-delay: 1s;
-}
-
-@keyframes slideIn {
-    0% {
-        top: -100%;
-    }
-
-    100% {
-        top: 0;
-    }
 }
