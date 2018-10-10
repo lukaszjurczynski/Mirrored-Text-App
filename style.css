@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-image: radial-gradient( rgb(66, 134, 244), rgb(55, 59, 68));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+.box {
+    width: 20rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputField {
+    width: 15rem;
+    font-size: 1.2rem;
+    background-color: rgb(66, 134, 244, .6);
+    padding: 1rem;
+    border: 2px solid rgb(91, 154, 255);
+    border-radius: 25px;
+    text-align: center;
+    color: rgba(255,255,255, .5);
+    transition: all .2s;
+}
+
+.desc {
+    color: rgba(255,255,255);
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.inputField:hover {
+    margin-bottom: .2rem;
+    box-shadow: 0 .2rem .5rem rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+.inputField:focus {
+    width: 20rem;
+    color: #ffffff;
+}
+
+.divDimensions {
+    height: auto;
+    width: auto;
+    white-space: nowrap;
+    
+}
+
+h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 5rem;
+    position: relative;
+    transition: all;
+}
+
+h1:before {
+    content: attr(data-text);
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: rotateX(180deg);
+    transform-origin: bottom;
+    line-height: 4.3rem;
+    background-image: linear-gradient(0deg, #fff 0, transparent 90%);
+    opacity: .6;
+    -webkit-background-clip: text;
+    color: transparent;
+    filter: blur(.4px);
+}
+
+h1:before .slideanimation {
+    animation: slideIn 1s;
+    animation-delay: 1s;
+}
+
+@keyframes slideIn {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
